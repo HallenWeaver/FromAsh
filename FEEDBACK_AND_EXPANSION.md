@@ -588,8 +588,6 @@ Players keep *all three* for different reasons—perfect design.
 
 **Then prototype in-game** to test feel and balance.
 
-
-
 - **Reducing RNG dependency** while maintaining tension
 - **Specifying fuel and resource chains** completely
 - **Adding decorative depth** without trivializing the challenge
@@ -598,3 +596,8 @@ Players keep *all three* for different reasons—perfect design.
 The ash system and mud brick specialization ideas are your strongest expansion opportunities. Focus on making these feel essential, not optional.
 
 This could genuinely be a beloved mod for the Superflat community.
+
+
+## Section 9: Other Ideas
+- Distilling can be its own separate mod, along with something I came up with - an Apothecary Villager, which substitutes in part the need for a Cleric
+- A mod I really liked in concept that I just saw for ceramic blocks is "Ceramics", by KnightMiner
