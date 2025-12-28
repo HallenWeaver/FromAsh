@@ -2,7 +2,7 @@
 
 ## What are we aiming to solve?
 
-Structureless Superflat Survival in Minecraft is an extremely hard, yet rewarding, challenge. It requires deep knowledge of game mechanics to go from a basically unplayable state to a sprawling civilization which, sadly, will forever lack some forms of technology and materials. This mod does not seek to allow players to encounter items or structures that would fundamentally break the experience, such as allowing for players to obtain Lava (which can also open possibilities such as the Nether), or any means of getting to the End dimension.
+Structureless Superflat Survival in Minecraft is an extremely hard, yet rewarding, challenge. It requires deep knowledge of game mechanics to go from a basically unplayable state to a sprawling civilization which, sadly, will forever lack some forms of technology and materials. This mod does not seek to allow players to encounter items or structures that would fundamentally break the experience, such as allowing for players to obtain Lava (which is important for obtaining stone, as well as also opening possibilities such as the Nether), or any means of getting to the End dimension.
 
 This mod is fundamentally about allowing for certain materials to exist within the context of the game. 
 
@@ -50,3 +50,33 @@ Given you will now have two Villagers, your priority should be to build a breede
 ### Phase 5 -- Now what?
 
 We would like to build with what we have. And despite now having access to a lot of items, we potentially could have more. For example - we have a type of stone in the dripstone block, which can be acquired after trading regular dripstone with a WT, growing it with water, and grabbing that and turning it into a block. We would also have access to some more blocks if we were able to process clay (either smelting clay balls into clay bricks, or full blocks for terracotta), which can be obtained by turning dirt into mud and then using a dripstone beneath it; this could also bring in a furnace, such as the one from the "Brick Furnace" mod. We could maybe turn the dirt into something else (or even the mud into some new type of "fired mud"). We could have more patterns for wood-related blocks, or maybe use campfires to get ash (and use it similarly to the AshClay mod, which combines wood ash and water to generate "Ash Clay Bricks" that can also be made into a furnace). We could use more decoration items, such as the "Macaw" mod suite which has loads of doors, windows, bridges, and many other things. How could we create a mod that doesn't break the immersion of Structureless Superflat while breathing fresh air into it? Sort of like a "Vanilla+".
+
+## Ideas!
+
+This section is dedicated for brainstorming.
+
+### Furnaces
+- Mud Brick Furnaces: Based on real life furnaces created out of so-called Adobe Bricks (made with mud and water, not unlike the mud bricks from Minecraft itself). Functionally similar to regular stone furnaces from the Vanilla game, but would open up some new items, such as charcoal from smelting logs, clay bricks from clay balls, and terracotta from clay blocks. 
+  - Taking inspiration from real life, these types of furnaces are brittle and require maintenance to keep working; kiln washing/coating to make the bricks more durable, and an ash/water mixture that provides a glaze that prevents the buildup of slag. Maybe add some slag-cleaning mechanic to the mod?
+- Clay Brick Furnaces: The logical next step from the previous block, which is more durable. Thing is - we wouldn't have much need for a mud brick furnace once this variety is acquired... so should it be harder to get one? Or should there be some more specific use for Mud Brick furnaces that make them viable? Also, we can use these furnaces to create fired bricks closer to real life - mixing clay balls with dripstone (which should probably be crushed before mixing... do we need a crusher block? How would that even work in a stoneless world?), firing them in a clay brick furnace and creating our third tier of bricks. 
+- Real life has a number of examples of intermediate technological steps that last for short periods of time before being superseded by more advanced tech. That being said, games are often praised for balance, and items with short lifespans are frowned upon. Striking a balance between realism and usability is key.
+- Dripstone Furnaces: I see the merit in the idea, but I don't really like it. It would be very hard to set up: getting just the right trade from a villager, then getting 32 pointed dripstone to form and turn them into 8 blocks, which become the singular dripstone furnace block.
+- Sandstone Furnaces: For reasons somewhat similar to the above - currently, it's hard to obtain sand, let alone sandstone, in a SSf world. They only come by with having luck with a villager trade... which begs the question - should there be other ways to get sand? And, speaking of gravity blocks, what about gravel?
+
+### New Villagers?
+- Geologist: would have some interesting trades, allowing for sand and gravel trades once acquired. What would be his workstation block, though? Also, what would be their Master-level trade?
+- Botanist: this comes from a mod I enjoyed using, "Beautify: Refabricated". It adds more decorations in a way that doesn't break the immersion from Vanilla MC, and also adds in a workstation. I wouldn't need to implement this, but instead it have it work in tandem with my mod in the form of a modpack.
+- "Unobtainable" Vanilla Villagers: Could we create alternate blocks that would allow for professions that require a stone-based workstation block to exist? These include Stone Cutters, Blast Furnaces, Smokers, Grindstones and Brewing Stands.
+- Addendum - Brewing Stands "stand" (ha, see what I did there) as even more problematic blocks, since they are currently the only workstation that requires an item exclusive to the Nether: blaze rods. And even if we could go to the nether, we don't have structures, therefore no nether fortresses, and thus, no blaze spawners; there are literally no blazes, or even wither skeletons, in a potential nether. Should we allow for a different way to obtain potions? This reminded me of something...
+- Zombified piglins - should they have a way to be cured? We can obtain them with lightning striking pigs... This would open the loot pool to some items, particularly blackstone, which can substitute stone in every single recipe (and render the whole furnace discussion pointless in the process). 
+
+### Other Blocks?
+- I'd love to see a bamboo trade for the WT. This would open up scaffolding and the bamboo block palette...
+- More tree types, maybe? Then again, this would screw the loot table for the WT and make it harder to get the Oak Sapling trade, required to obtain apples that will cure villagers and yadda yadda.
+
+### Other features
+- Painted bricks? How would that work, though... but it would bring some variety to the palette. I'd rather not go the glass/terracotta route that just combines a dye with 8 blocks in a grid, but since this is the vanilla way, I guess we have the precedent set.
+- Copper farming is brutal - and killing drowned is the only way to get the material. How could we make it more feasible?
+
+### Anything else?
+- Currently out of ideas.
