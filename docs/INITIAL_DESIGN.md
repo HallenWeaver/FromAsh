@@ -31,9 +31,11 @@ If used in regular play, acts like a blast furnace but works for all blocks.
 
 ### Ceramic Bricks
 Obtained by joining 4 Ceramic Brick Items, which are obtained in turn by smelting Unfired Ceramic Brick Items; these are the result of combining ash and clay balls. They have higher blast tolerances than regular bricks and will appear to be a darker color than their vanilla Brick counterparts.
+- Variants: Slabs & Stairs
 
 ### Dyed Bricks and Dyed Ceramic Bricks
 Obtained by applying dye to Bricks/Ceramic Bricks, similarly to what is done for Terracotta blocks. Ceramic Bricks are darker than their regular varieties.
+- Variants: Slabs & Stairs
 
 ### Unfired Ceramic
 Obtained by joining 4 Unfired Ceramic Brick Items in a square, these function similarly to clay but have a darker texture.
@@ -41,13 +43,15 @@ Obtained by joining 4 Unfired Ceramic Brick Items in a square, these function si
 ### Porcelain
 Porcelain is the result of smelting unfired ceramic blocks. They are somewhat similar to Terracotta blocks, but have a rougher finish that is similar to blocks such as Granite/Andesite/Diorite.
 - Variant: Dyed Porcelain. Unlike dyed Terracotta, the colors are more vibrant and match more closely that of their dyes.
+- Variants: Slabs & Stairs
 
 ### Polished Porcelain
 Similarly to the Granite/Andesite/Diorite blocks, there is a polished version for the Porcelain blocks.
 - Variant: Dyed Polished Porcelain.
+- Variants: Slabs & Stairs
 
 ### Tiled Porcelain
-A block of polished porcelain with more intricate patterns. Visually similar to Glazed Terracotta, but requires the application of a pattern (such as one found in banners) on the block. (Might not be good for large numbers of blocks being rendered...)
+A block of polished porcelain with more intricate patterns. Conceptually similar to Glazed Terracotta, but have a more glossy finish. Obtained by re-smelting Dyed Porcelain blocks.
 
 ### Brick Piston
 Functions as an alternative variant to a regular stone piston. Also possesses a sticky variant.
@@ -56,10 +60,34 @@ Functions as an alternative variant to a regular stone piston. Also possesses a 
 Functions as an alternative variant to a regular stone lever.
 
 ### Brick Redstone Repeater
-Functions as an alternative variant to a regular redstone repeater. 
+Functions as an alternative variant to a regular redstone repeater.
+
+### Brick Redstone Comparator
+Functions as an alternative variant to a regular redstone comparator. Can't be created in Structureless Superflat due to the Nether being unavailable, which means we have no access to quartz. 
+
+### Brick Observer
+Functions as an alternative variant to a regular observer. Can't be created in Structureless Superflat due to the Nether being unavailable, which means we have no access to quartz.
+
+### Brick Dispenser
+Functions as an alternative variant to a regular dispenser.
+
+### Brick Dropper
+Functions as an alternative variant to a regular dropper.
+
+### Brick Crafter
+Functions as an alternative variant to a regular crafter; requires a brick dropper in its recipe.
+
+### Brick Stonecutter
+Functions as an alternative variant to a regular stonecutter.
+
+### Porcelain Grindstone
+Un-dyed porcelain
 
 ### Geology Table
-Cosmetic block, solely for the Geologist's use.
+Cosmetic block, solely for the Geologist Villager's use.
+
+### Engineering Blueprint Table
+Cosmetic block (for now at least), solely for the Engineer Villager's use.
 
 ## Items
 
@@ -85,3 +113,38 @@ Like Slag, the number of smelted items + the number of Ash items in a Brick furn
 #### Geologist
 Possesses trades that allow for easier times acquiring sand, gravel, and amethyst shards, which open up items such as sandstone and concrete in this world. Also trades for pottery sherds.
 - Workstation block: Geology Table.
+- Trades:
+  - Novice: 
+    - 3 Emeralds >> 5-12 Sand
+    - 3 Emeralds >> 5-12 Red Sand
+    - 3 Emeralds >> 5-12 Gravel
+  - Apprentice: 
+    - 5 Emeralds >> Brush
+    - 1 Decorated Pot >> 5 Emeralds
+  - Journeyman: 
+    - 2 Emeralds >> 4-6 Amethyst Shards
+    - (No ideas for another journeyman trade now)
+  - Expert:
+    - 10 Emeralds >> 1 Pottery Sherd (Chosen at random from the loot pool)
+    - 10 Emeralds >> 1 Pottery Sherd (Chosen at random from the loot pool)
+  - Master: 
+    - (No ideas for master trades for now)
+
+#### Engineer
+Possesses trades that allow for ways of obtaining redstone equipment - and the only way to obtain redstone comparators, daylight detectors, and observers in Structureless Superflat.
+- Workstation block: Engineer Blueprint Table
+- - Trades:
+  - Novice: 
+    - 1 Emerald >> 4 Redstone Torches
+    - (No other ideas)
+  - Apprentice: 
+    - 3 Emeralds >> Brick Redstone Repeater
+    - 3 Emeralds >> Brick Redstone Dropper
+  - Journeyman: 
+    - 5 Emeralds >> Brick Redstone Comparator
+    - 5 Emeralds + Bow >> Brick Redstone Dispenser
+  - Expert:
+    - 8 Emeralds >> Brick Observer
+    - (No ideas for another expert trade for now)
+  - Master: 
+    - (No ideas for master trades for now)
