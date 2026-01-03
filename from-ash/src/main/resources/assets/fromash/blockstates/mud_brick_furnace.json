@@ -1,7 +1,19 @@
 {
-  "variants":{
-    "": {
-        "model": "fromash:block/mud_brick_furnace"
+  "variants": {
+    "facing=north": {
+      "model": "fromash:block/mud_brick_furnace"
+    },
+    "facing=south": {
+      "model": "fromash:block/mud_brick_furnace",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "fromash:block/mud_brick_furnace",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "fromash:block/mud_brick_furnace",
+      "y": 270
     }
   }
 }

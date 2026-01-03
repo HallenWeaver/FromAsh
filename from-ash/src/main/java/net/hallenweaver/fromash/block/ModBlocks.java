@@ -15,12 +15,17 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static final AbstractBlock.Settings MUD_BRICK_FURNACE_SETTINGS = AbstractBlock.Settings.create().strength(3.5f).requiresTool().sounds(BlockSoundGroup.MUD_BRICKS);
-    public static final Block MUD_BRICK_FURNACE = registerBlock("mud_brick_furnace", MUD_BRICK_FURNACE_SETTINGS);
+    @FunctionalInterface
+    private interface BlockFactory {
+        Block create(AbstractBlock.Settings settings);
+    }
 
-    private static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
+    public static final AbstractBlock.Settings MUD_BRICK_FURNACE_SETTINGS = AbstractBlock.Settings.create().strength(3.5f).requiresTool().sounds(BlockSoundGroup.MUD_BRICKS);
+    public static final Block MUD_BRICK_FURNACE = registerBlock("mud_brick_furnace", MUD_BRICK_FURNACE_SETTINGS, DirectionalBlock::new);
+
+    private static Block registerBlock(String name, AbstractBlock.Settings blockSettings, BlockFactory factory) {
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(FromAsh.MOD_ID, name));
-        Block block = new Block(blockSettings.registryKey(key));
+        Block block = factory.create(blockSettings.registryKey(key));
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, key, block);
     }

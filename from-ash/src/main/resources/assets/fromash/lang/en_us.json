@@ -1,5 +1,6 @@
 {
-  "item.fromash.mud_brick_furnace": "Mud Brick Furnace",
   "item.fromash.ash_pile": "Ash",
-  "item.fromash.slag": "Slag"
+  "item.fromash.slag": "Slag",
+
+  "item.fromash.mud_brick_furnace": "Mud Brick Furnace"
 }

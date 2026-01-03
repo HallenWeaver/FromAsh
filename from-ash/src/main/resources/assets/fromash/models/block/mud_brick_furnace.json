@@ -1,6 +1,11 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "fromash:block/mud_brick_furnace"
+    "north": "fromash:block/mud_brick_furnace/mud_brick_furnace",
+    "south": "fromash:block/mud_brick_furnace/mud_brick_furnace_side",
+    "east": "fromash:block/mud_brick_furnace/mud_brick_furnace_side",
+    "west": "fromash:block/mud_brick_furnace/mud_brick_furnace_side",
+    "up": "fromash:block/mud_brick_furnace/mud_brick_furnace_top",
+    "down": "fromash:block/mud_brick_furnace/mud_brick_furnace_bottom"
   }
 }
