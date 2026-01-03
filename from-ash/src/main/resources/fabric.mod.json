@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "fromash",
+	"version": "${version}",
+	"name": "FromAsh",
+	"description": "A mod that brings alternatives to missing blocks from Structureless Superflat worlds",
+	"authors": [
+		"HallenWeaver"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/HallenWeaver/FromAsh"
+	},
+	"license": "MIT",
+	"icon": "assets/fromash/fromashicon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.hallenweaver.fromash.FromAsh"
+		],
+		"fabric-datagen": [
+			"net.hallenweaver.fromash.FromAshDataGenerator"
+		],
+		"client": [
+			"net.hallenweaver.fromash.FromAshClient"
+		]
+	},
+	"mixins": [
+		"fromash.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

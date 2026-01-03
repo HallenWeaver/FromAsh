@@ -1,0 +1,136 @@
+---
+config:
+  flowchart:
+    htmlLabels: true
+    curve: linear
+    fontSize: 16
+    padding: 60
+    nodeSeparation: 150
+    rankSeparation: 220
+    wrappingWidth: 200
+---
+flowchart TD
+    subgraph tier1["<b>⭐ TIER 1: Early Game - Mud Brick Furnace</b>"]
+        t1_space1[" "]
+        t1_space2[" "]
+        mudBrick["<b>🧱 Mud Brick</b>"]
+        mudBrickFurnace["<b>🔥 Mud Brick Furnace</b><br/>(8x Mud Brick)"]
+    end
+
+    subgraph tier2["<b>⭐ TIER 2: Mid Game - Smelting & Slag</b>"]
+        t2_space1[" "]
+        t2_space2[" "]
+        woodLogs["<b>🪵 Wood Logs</b>"]
+        cactus["<b>🌵 Cactus</b>"]
+        seaPickle["<b>✨ Sea Pickle</b>"]
+        clayBall["<b>⚪ Clay Ball</b>"]
+        
+        charcoal["<b>🪨 Charcoal</b>"]
+        greenDye["<b>🟢 Green Dye</b>"]
+        limeDye["<b>🟢 Lime Dye</b>"]
+        brick["<b>🧱 Brick</b>"]
+        slag["<b>⬛ Slag (10-15%)</b>"]
+    end
+
+    subgraph tier3["<b>⭐ TIER 3: Mid-Late Game - Brick Furnace & Ash</b>"]
+        t3_space1[" "]
+        t3_space2[" "]
+        brickFurnace["<b>🔥 Brick Furnace</b><br/>(8x Brick = 4x Brick Block)"]
+        brickSmoker["<b>💨 Brick Smoker</b><br/>(with Logs)"]
+        ash["<b>🌫️ Ash</b>"]
+        unfiredCeramicBrick["<b>⚪ Unfired Ceramic Brick</b><br/>(Ash + Clay Ball)"]
+    end
+
+    subgraph tier4["<b>⭐ TIER 4: Late Game - Ceramic Furnace & Porcelain</b>"]
+        t4_space1[" "]
+        t4_space2[" "]
+        ceramicFurnace["<b>🔥 Ceramic Furnace</b><br/>(high-tier, 2x speed)"]
+        unfiredCeramic["<b>⚪ Unfired Ceramic Block</b><br/>(4x Unfired Ceramic Brick)"]
+        ceramicBrick["<b>🟫 Ceramic Brick</b><br/>(smelt Unfired)"]
+        porcelainBlock["<b>⬜ Porcelain Block</b>"]
+        dyed["<b>🎨 Dyed Blocks</b><br/>(Ceramic/Porcelain)"]
+    end
+
+    subgraph tier5["<b>⭐ TIER 5: End Game - Refined Materials</b>"]
+        t5_space1[" "]
+        t5_space2[" "]
+        polished["<b>✨ Polished Porcelain</b><br/>(+ Dyed variants)"]
+        tiled["<b>🎭 Tiled Porcelain</b><br/>(grindstone from Dyed)"]
+    end
+
+    subgraph slag_line["<b>⚠️ Slag Refinement Line</b>"]
+        slag_space1[" "]
+        slag_space2[" "]
+        slagRefiner["<b>⚙️ Slag Refiner</b><br/>(Hopper + Brick Furnace)"]
+        nuggets["<b>💎 Metal Nuggets</b><br/>(60% Iron / 30% Copper / 10% Gold)"]
+    end
+
+    subgraph redstone["<b>🔴 Redstone Alternatives</b><br/>(Brick variants of vanilla blocks)"]
+        brickPiston["<b>Piston</b>"]
+        brickLever["<b>Lever</b>"]
+        brickRepeater["<b>Repeater</b>"]
+        brickComparator["<b>Comparator</b>"]
+        brickObserver["<b>Observer</b>"]
+        brickDispenser["<b>Dispenser</b>"]
+        brickDropper["<b>Dropper</b>"]
+        brickCrafter["<b>Crafter</b>"]
+        brickCutter["<b>Stonecutter</b>"]
+    end
+
+    mudBrick -->|x8| mudBrickFurnace
+    mudBrickFurnace -- |Start here| --> tier2
+
+    woodLogs -->|MB Furnace| charcoal
+    woodLogs -->|MB Furnace 10%| slag
+    cactus -->|MB Furnace| greenDye
+    cactus -->|MB Furnace 10%| slag
+    seaPickle -->|MB Furnace| limeDye
+    seaPickle -->|MB Furnace 10%| slag
+    clayBall -->|MB Furnace| brick
+    clayBall -->|MB Furnace 15%| slag
+
+    tier2 -->|Progress| brickFurnace
+    
+    brick -->|x4| brickFurnace
+    brickFurnace -->|Primary| tier3
+    brickFurnace -->|combine| brickSmoker
+    brickFurnace -->|produces| ash
+
+    ash -->|combine| clayBall
+    clayBall -->|2x2 grid| unfiredCeramicBrick
+    unfiredCeramicBrick -->|Furnace| ceramicBrick
+    unfiredCeramicBrick -->|x4| unfiredCeramic
+    unfiredCeramic -->|Furnace| porcelainBlock
+    porcelainBlock -->|+ dye| dyed
+
+    dyed -->|grindstone| tiled
+    unfiredCeramic -->|dyeable block| dyed
+    dyed -->|Furnace| polished
+
+    tier4 -->|unlock| ceramicFurnace
+    ceramicFurnace -->|refine slag| slagRefiner
+    
+    slag -->|Slag Refiner| nuggets
+
+    brickFurnace -->|combine| redstone
+
+    style tier1 fill:#bf616a,stroke:#d08770,color:#eceff4,stroke-width:3px,padding:20px
+    style tier2 fill:#d08770,stroke:#ebcb8b,color:#2e3440,stroke-width:3px,padding:20px
+    style tier3 fill:#ebcb8b,stroke:#a3be8c,color:#2e3440,stroke-width:3px,padding:20px
+    style tier4 fill:#88c0d0,stroke:#81a1c1,color:#2e3440,stroke-width:3px,padding:20px
+    style tier5 fill:#a3be8c,stroke:#5e81ac,color:#2e3440,stroke-width:3px,padding:20px
+    style slag_line fill:#434c5e,stroke:#4c566a,color:#eceff4,stroke-width:3px,padding:20px
+    style redstone fill:#b48ead,stroke:#81a1c1,color:#2e3440,stroke-width:3px,padding:20px
+    
+    style t1_space1 fill:none,stroke:none
+    style t1_space2 fill:none,stroke:none
+    style t2_space1 fill:none,stroke:none
+    style t2_space2 fill:none,stroke:none
+    style t3_space1 fill:none,stroke:none
+    style t3_space2 fill:none,stroke:none
+    style t4_space1 fill:none,stroke:none
+    style t4_space2 fill:none,stroke:none
+    style t5_space1 fill:none,stroke:none
+    style t5_space2 fill:none,stroke:none
+    style slag_space1 fill:none,stroke:none
+    style slag_space2 fill:none,stroke:none

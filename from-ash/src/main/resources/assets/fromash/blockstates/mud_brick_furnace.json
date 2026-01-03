@@ -1,0 +1,7 @@
+{
+  "variants":{
+    "": {
+        "model": "fromash:block/mud_brick_furnace"
+    }
+  }
+}

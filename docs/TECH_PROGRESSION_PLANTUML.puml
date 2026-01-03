@@ -1,0 +1,130 @@
+@startuml FromAsh_TechProgression
+!theme plain
+skinparam backgroundColor #2e3440
+skinparam arrowColor #eceff4
+skinparam defaultTextAlignment center
+skinparam fontSize 11
+
+' Styling
+skinparam node {
+  backgroundColor #eceff4
+  borderColor #333
+  borderThickness 2
+}
+
+skinparam package {
+  backgroundColor<<tier1>> #bf616a
+  backgroundColor<<tier2>> #d08770
+  backgroundColor<<tier3>> #ebcb8b
+  backgroundColor<<tier4>> #88c0d0
+  backgroundColor<<tier5>> #a3be8c
+  backgroundColor<<slag>> #434c5e
+  backgroundColor<<redstone>> #b48ead
+  borderColor #333
+  borderThickness 2
+}
+
+' TIER 1
+package "⭐ TIER 1: Early Game" <<tier1>> {
+  () "🧱 Mud Brick" as mudBrick
+  () "🔥 Mud Brick Furnace\n(8x Mud Brick)" as mudBrickFurnace
+  mudBrick --> mudBrickFurnace : x8
+}
+
+' TIER 2
+package "⭐ TIER 2: Mid Game - Smelting & Slag" <<tier2>> {
+  () "🪵 Wood Logs" as woodLogs
+  () "🌵 Cactus" as cactus
+  () "✨ Sea Pickle" as seaPickle
+  () "⚪ Clay Ball" as clayBall
+  () "🪨 Charcoal" as charcoal
+  () "🟢 Green Dye" as greenDye
+  () "🟢 Lime Dye" as limeDye
+  () "🧱 Brick" as brick
+  () "⬛ Slag (10-15%)" as slag
+  
+  woodLogs --> charcoal : MB Furnace
+  woodLogs --> slag : 10%
+  cactus --> greenDye : MB Furnace
+  cactus --> slag : 10%
+  seaPickle --> limeDye : MB Furnace
+  seaPickle --> slag : 10%
+  clayBall --> brick : MB Furnace
+  clayBall --> slag : 15%
+}
+
+mudBrickFurnace --> woodLogs : Start here
+
+' TIER 3
+package "⭐ TIER 3: Mid-Late Game - Brick Furnace & Ash" <<tier3>> {
+  () "🔥 Brick Furnace\n(8x Brick = 4x Block)" as brickFurnace
+  () "💨 Brick Smoker" as brickSmoker
+  () "🌫️ Ash" as ash
+  () "⚪ Unfired Ceramic Brick" as unfiredCeramicBrick
+  
+  brick --> brickFurnace : x4
+  brickFurnace --> brickSmoker : combine
+  brickFurnace --> ash : produces
+  ash --> clayBall : combine
+  clayBall --> unfiredCeramicBrick : 2x2
+}
+
+' TIER 4
+package "⭐ TIER 4: Late Game - Ceramic Furnace & Porcelain" <<tier4>> {
+  () "🔥 Ceramic Furnace" as ceramicFurnace
+  () "⚪ Unfired Ceramic Block" as unfiredCeramic
+  () "🟫 Ceramic Brick" as ceramicBrick
+  () "⬜ Porcelain Block" as porcelainBlock
+  () "🎨 Dyed Blocks" as dyed
+  
+  unfiredCeramicBrick --> ceramicBrick : Furnace
+  unfiredCeramicBrick --> unfiredCeramic : x4
+  unfiredCeramic --> porcelainBlock : Furnace
+  porcelainBlock --> dyed : + dye
+  unfiredCeramic --> dyed : dyeable
+}
+
+' TIER 5
+package "⭐ TIER 5: End Game - Refined Materials" <<tier5>> {
+  () "✨ Polished Porcelain" as polished
+  () "🎭 Tiled Porcelain" as tiled
+  
+  dyed --> tiled : grindstone
+  dyed --> polished : Furnace
+}
+
+' Slag Refinement
+package "⚠️ Slag Refinement Line" <<slag>> {
+  () "⚙️ Slag Refiner" as slagRefiner
+  () "💎 Metal Nuggets" as nuggets
+  
+  slag --> slagRefiner : refine
+  slagRefiner --> nuggets : output
+}
+
+' Redstone Alternatives
+package "🔴 Redstone Alternatives" <<redstone>> {
+  () "Piston" as brickPiston
+  () "Lever" as brickLever
+  () "Repeater" as brickRepeater
+  () "Comparator" as brickComparator
+  () "Observer" as brickObserver
+  () "Dispenser" as brickDispenser
+  () "Dropper" as brickDropper
+  () "Crafter" as brickCrafter
+  () "Stonecutter" as brickCutter
+}
+
+brickFurnace --> brickPiston : combine
+brickFurnace --> brickLever : combine
+brickFurnace --> brickRepeater : combine
+brickFurnace --> brickComparator : combine
+brickFurnace --> brickObserver : combine
+brickFurnace --> brickDispenser : combine
+brickFurnace --> brickDropper : combine
+brickFurnace --> brickCrafter : combine
+brickFurnace --> brickCutter : combine
+
+ceramicFurnace --> slagRefiner : unlock
+
+@enduml
